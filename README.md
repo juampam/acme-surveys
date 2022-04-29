@@ -17,7 +17,7 @@ git clone https://github.com/juampam/acme-surveys.git acme-surveys
 ```
 2. You need [Node js](https://nodejs.org/es/download/) and [Microsoft SQL Server.](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
 (Follow the links and install them)
-3. If you are using GNU/Linux
+### For GNU/Linux
 #### Install Node and NPM
 - Arch Linux
 ```bash
