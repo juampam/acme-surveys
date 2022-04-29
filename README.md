@@ -42,7 +42,7 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Database-2022" \
 ```
 
 **Note.** The default username is 'sa' and the password is 'Database-2022', make sure to change these values in the 
-[connection]() file.
+[connection](https://github.com/juampam/acme-surveys/blob/master/database/connection.js) file.
 - then install [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15o), copy and paste the /database/query.sql content and execute it.
 ### Microsoft SQL Server configuration (Windows)
 - login with Windows Authentication.
