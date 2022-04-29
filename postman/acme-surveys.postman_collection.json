@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "76a0fc0d-60d5-481a-8c7a-a1140ab45003",
+		"name": "acme-surveys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Read all surveys",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/getsurveys",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getsurveys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Survey",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "url",
+							"value": "localhost:5000/api/findsurvey/1002",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/findsurvey/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"findsurvey",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/fields/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"fields",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create survey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTExNzMzODcsImV4cCI6MTY1MTc3ODE4N30.XAFC6Twn7joYwjEdSrpGdbaBDafseB3QmbwRu7WVQ68",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Encuesta",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "encuesta uno",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/newsurvey",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"newsurvey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new field",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "question",
+							"value": "como se llama tu hermana",
+							"type": "default"
+						},
+						{
+							"key": "answer",
+							"value": "200",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/newfield/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"newfield",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "answer field",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "answer",
+							"value": "Ernesta",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/answer/1/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"answer",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate token",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
